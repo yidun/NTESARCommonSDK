@@ -12,6 +12,7 @@
 #include <vector>
 #include <MNN/HalideRuntime.h>
 #include <MNN/MNNDefine.h>
+#define MNN_MAX_TENSOR_DIM 6
 
 namespace MNN {
 
@@ -259,6 +260,11 @@ public:
      * @brief print tensor data. for DEBUG use only.
      */
     void print() const;
+    
+    /**
+     *@brief print tensor shape
+     */
+    void printShape() const;
 
 private:
     halide_buffer_t mBuffer;
